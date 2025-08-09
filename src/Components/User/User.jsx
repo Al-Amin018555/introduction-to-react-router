@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const User = ({ user }) => {
     // console.log(user)
-    const { name, phone, email } = user;
-    
+    const { id, name, phone, email } = user;
+
     const userStyle = {
         border: '2px solid red',
         padding: '5px',
@@ -12,6 +14,10 @@ const User = ({ user }) => {
             <h2>{name}</h2>
             <p>Email: {email}</p>
             <p>Phone:{phone}</p>
+            <Link to={`/user/${id}`}>Show Details</Link>
+            <Link to={`/user/${id}`}>
+                <button>Click Me</button>
+            </Link>
 
         </div>
     );
